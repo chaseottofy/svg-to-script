@@ -60,7 +60,7 @@
   --ds-blue-900: #52a8ff;
   --ds-background-100: #0a0a0a;
   --ds-background-200: #000;
-  --grad-vert-1: linear-gradient(0deg, hsla(0, 0%, 100%, .05), hsla(0, 0%, 100%, .05)), radial-gradient(50% 50%at 50% 100%, hsla(0, 0%, 100%, .1) 0, hsla(0, 0%, 100%, 0) 100%);
+  --grad-vert-1: linear-gradient(0deg, hsla(0, 0%, 100%, .05), hsla(0, 0%, 100%, .05)), radial-gradient(50% 50% at 50% 100%, hsla(0, 0%, 100%, .1) 0, hsla(0, 0%, 100%, 0) 100%);
 }
 
 .template-center {
@@ -334,8 +334,6 @@ button {
 }
 
 .run-options {
-  /* background: var(--ds-background-100); */
-  /* background: var(--grad-vert-2); */
   border: none;
   width: fit-content;
   padding: 0 16px;
@@ -367,7 +365,8 @@ button {
 .float-copy,
 .float-reset {
   align-items: center;
-  border: 1px solid var(--accents-1);
+  border: 1px solid var(--accents-2);
+  background: var(--ds-background-100);
   border-radius: var(--radius);
   cursor: pointer;
   display: flex;
@@ -457,8 +456,8 @@ button {
   font-size: 12px;
   font-weight: 500;
   height: 40px;
-  left: 0;
   line-height: 40px;
+  left: 0;
   margin: 0 auto;
   padding-left: 12px;
   position: absolute;
@@ -482,6 +481,7 @@ button {
 
 .textarea {
   background: var(--ds-background-100);
+  color: var(--accents-6);
   font-family: monospace
 }
 
@@ -538,6 +538,12 @@ button {
     padding-left: 8px;
   }
 
+  .display-wrapper:before,
+  .textarea-wrapper:before {
+    height: 50px;
+    line-height: 50px;
+  }
+
   .app-title {
     font-size: .75rem;
     white-space: normal
@@ -582,7 +588,7 @@ button {
   }
 
   .textarea-wrapper {
-    background-image: linear-gradient(var(--background), var(--ds-background-100)), linear-gradient(200deg, var(--ds-blue-100) 0, var(--background) 20%, rgba(121, 40, 202, 0) 80%);
+    background-image: linear-gradient(var(--background), var(--ds-background-100)), linear-gradient(200deg, var(--ds-blue-100) 0, var(--ds-gray-400) 10%, rgba(121, 40, 202, 0) 90%);
     padding-top: 40px
   }
 
@@ -597,7 +603,7 @@ button {
   }
 
   .textarea-wrapper:after {
-    background: linear-gradient(90deg, transparent, var(--accents-2) 10%, var(--accents-4) 80%, transparent);
+    background: linear-gradient(90deg, transparent, var(--accents-4) 10%, var(--accents-4) 80%, transparent);
     bottom: 0;
     content: "";
     height: 1px;
