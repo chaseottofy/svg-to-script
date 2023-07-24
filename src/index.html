@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <meta charset=UTF-8>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <meta name=color-scheme content=dark>
+  <meta name="author" content="chase ottofy">
+  <meta name="description" content="svg to javascript">
+  <meta name="keywords" content="parse svg, svg parser, svg-parser, javascript, vanilla, typescript, chase ottofy, ottofy">
+  <link rel=icon type=image/png sizes=32x32 href=./favicon-32x32.png>
+  <link rel=stylesheet href=styles.css>
+  <script src=index.js defer=defer></script>
+  <title>svg-to-script</title>
+</head>
+
+<body data-theme=dark>
+  <header class=header>
+    <div class=col-1>
+      <div class="run-options">
+        <div class="run-options-title">
+          <span class="template-center">
+            <p class="template-center-title">svg-to-script&nbsp;</p>
+            <p>options</p>
+          </span>
+          <span class="template-center"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="14px" width="14px" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class=col-2>
+      <div class="float-btns">
+        <button class=run-btn aria-label="button">Run</button>
+        <button class=float-copy aria-label="button"><svg fill=none height=24 shape-rendering=geometricPrecision stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=1.5 viewBox="0 0 24 24" width=24 style=color:var(--geist-foreground);width:24px;height:24px><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"/></svg></button>
+        <button class=float-reset aria-label="button"><svg class=with-icon_icon__MHUeb data-testid=geist-icon fill=none height=24 shape-rendering=geometricPrecision stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=1.5 viewBox="0 0 24 24" width=24 style=color:var(--geist-foreground);width:24px;height:24px><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg></button>
+      </div>
+      
+    </div>
+
+  </header>
+  <div class=container-2>
+    <aside class=output-svg></aside>
+    <div class=textarea-wrapper data-title=input><textarea class=textarea placeholder="Input inline svg..." autocapitalize="false" spellcheck=false></textarea></div>
+    <div class=display-wrapper data-title=output>
+      <div class=display></div>
+    </div>
+  </div>
+
+  <aside class="options-aside disable-modal">
+    <a href=https://github.com/chaseottofy/svg-to-script title="go to repo" rel=noreferrer target=_blank class="app-title">svg-to-script</a>
+    <span class="options-aside-title">Select attributes to ignore on output:</span>
+    <div class=option><label><input id=checkID class=custom-checkbox type=checkbox name=parse-options value=ids> <span class=checkmark><svg class=checkmark-svg fill=none height=24 shape-rendering=geometricPrecision stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=3 viewBox="0 0 24 24" width=24><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg> </span>IDs</label></div>
+    <div class=option><label><input id=checkC class=custom-checkbox type=checkbox name=parse-options value=classes> <span class=checkmark><svg class=checkmark-svg fill=none height=24 shape-rendering=geometricPrecision stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=3 viewBox="0 0 24 24" width=24><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg> </span>Classes</label></div>
+    <div class=option><label><input id=checkDA class=custom-checkbox type=checkbox name=parse-options value=data-attributes> <span class=checkmark><svg class=checkmark-svg fill=none height=24 shape-rendering=geometricPrecision stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=3 viewBox="0 0 24 24" width=24><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg> </span>Data-Attr</label></div>
+  </aside>
+</body>
+
+</html>

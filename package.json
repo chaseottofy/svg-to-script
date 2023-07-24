@@ -1,0 +1,34 @@
+{
+  "name": "svg-to-script",
+  "version": "1.0.0",
+  "description": "parse inline svg as js code",
+  "main": "dist/index.js",
+  "scripts": {
+    "copy-static": "node copy-minimize.js",
+    "predeploy": "npm run build && npm run copy-static",
+    "start": "node dist/index.js",
+    "build": "tsc && tsup src/index.ts",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaseottofy/svg-to-script.git"
+  },
+  "author": "chase ottofy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaseottofy/svg-to-script/issues"
+  },
+  "homepage": "https://github.com/chaseottofy/svg-to-script#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "gh-pages": "^5.0.0",
+    "html-minifier": "^4.0.0",
+    "htmlnano": "^2.0.4",
+    "minify": "^10.3.0",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  }
+}
