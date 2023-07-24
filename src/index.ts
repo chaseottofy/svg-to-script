@@ -24,14 +24,6 @@ const getParserOptions = (parseOptions: NodeListOf<HTMLInputElement>): ParserOpt
   return options;
 };
 
-/*
-
-Write a short description of the following function in markdown. Be sure to include the following:
-- Can be used to parse any valid SVG string
-- Returns a string of JavaScript code that can be used to dynamically create the SVG element
-- Talk about why someone would want to dynamically create an SVG element, especially if they already have the SVG string
-- Any additional information you think would be helpful
-*/
 const svgToScript = (element: Element, elementCounts: ElementCounts = {}, options: ParseOptions = {}): string => {
   elementCounts[element.nodeName] = (elementCounts[element.nodeName] || 0) + 1;
   const elementName = `${element.nodeName}${elementCounts[element.nodeName]}`;
